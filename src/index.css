@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #050810; --bg-alt: #0a0e1a;
+  --surface: #0f1629; --surface-hover: #182040; --surface-active: #1e2850;
+  --primary: #00ffff; --primary-hover: #00e5e5;
+  --secondary: #0099cc; --accent: #22d3ee; --accent-hover: #06b6d4;
+  --text: #e0f0ff; --text-sec: #8899bb; --text-muted: #556688;
+  --border: #152040; --border-strong: #1e3060;
+  --success: #00ff88; --warning: #ffbb00; --error: #ff0055;
+  --neon: #00ffff; --neon-dim: #006688; --neon-glow: rgba(0,255,255,0.35);
+  --grad-primary: linear-gradient(135deg,#00ffff 0%,#0099cc 100%);
+  --grad-accent: linear-gradient(135deg,#00ffff 0%,#22d3ee 50%,#0099cc 100%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px; line-height: 1.5;
+  font-synthesis: none; text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { min-height: 100vh; overflow-x: hidden; }
+#root { min-height: 100vh; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--neon-dim); }
+button { font-family: inherit; }
+::selection { background: var(--neon-glow); color: var(--text); }
