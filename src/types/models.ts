@@ -1,5 +1,6 @@
 export type ThemeMode = 'day' | 'night';
 export type ModelType = 'image' | 'text' | 'vision';
+export type TabId = 'models' | 'settings' | 'export' | 'advanced';
 
 export interface AIModel {
   id: string;
@@ -9,6 +10,16 @@ export interface AIModel {
   description: string;
   free: boolean;
   streaming?: boolean;
+}
+
+export interface GenerationResult {
+  id: string;
+  model: string;
+  prompt: string;
+  result: string;
+  timestamp: Date;
+  provider: string;
+  type: ModelType;
 }
 
 export interface GenerationRequest {
@@ -23,14 +34,14 @@ export interface GenerationRequest {
   apiKey?: string;
 }
 
-export interface GenerationResult {
+export interface HistoryItem {
   id: string;
   model: string;
   prompt: string;
   result: string;
+  type: ModelType;
   timestamp: Date;
   provider: string;
-  type: ModelType;
 }
 
 export interface APIKeys {
